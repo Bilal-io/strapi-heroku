@@ -1,0 +1,39 @@
+{
+  "name": "Strapi",
+  "description": "Strapi Heroku starter.",
+  "keywords": [
+    "strapi",
+    "blog",
+    "cloudinary",
+    "postgres",
+    "heroku"
+  ],
+  "repository": "https://github.com/Bilal-io/strapi",
+  "env": {
+    "CLOUDINARY_NAME": {
+      "description": "The 'Cloud name' of your Cloudinary account",
+      "required": true
+    },
+    "CLOUDINARY_KEY": {
+      "description": "The 'API Key' of your Cloudinary account",
+      "required": true
+    },
+    "CLOUDINARY_SECRET": {
+      "description": "The 'API Secret' of your Cloudinary account",
+      "required": true
+    },
+    "CLOUDINARY_FOLDER": {
+      "description": "The 'Folder' of your Cloudinary account",
+      "required": false
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
